@@ -4,78 +4,88 @@
 	box-sizing: border-box;
 }
 .app {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    font-family: "Montserrat", sans-serif;
-    z-index: 1;
-    position: absolute;
-    width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  background-image: url(image/rain.gif);
+  height: 100vh;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 .app img{
-	width: 100%;
+	/*width: 100%;
 	height: 100vh;
-  object-fit: cover;
+  object-fit: cover;*/
 }
 .box-icon{
-	position: absolute;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 2;
-    text-align: center;
-    width: 100%;
-    height: 100vh;
-    margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .box{
-	width: 15%;
-    height: 50%;
-    float: left;
-    display: inline-block;
-    transition: (-50px);
-    bottom: 50%;
-    border-radius: 30px;
-    margin: 0 auto;
+  width: 13%;
+  float: left;
+  margin: 20px;
+  height: 60vh;   
+}
+.clear{
+  clear: both;
 }
 .box img{
-    width: 100%;
-    height: 100%;
-    display: table;
-    object-fit: cover;
-    border-radius: 30px;
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ border-radius: 30px;
 }
 .box-mp3{
-    position: absolute;
-    z-index: 2;
-    width: 100%;
-    height: 100px;
-}
-
-.slider {
-  -webkit-appearance: none;
-  width: 100%;
-  height: 25px;
-  background: #d3d3d3;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-}
-
-.slider:hover {
-  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .box-volume img{
-    height: 40px;
+  height: 40px;
 }
 .box-volume {
-  width: 100%;
+  /*width: 100%;*/
 }
 #volume{
-  height: 40px;
-  width: 156px;
-  float: left;
+  height: 35px;
+  margin-left: 30px;
+}
+.footer{
+  z-index: 2;
+  flex-shrink: 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+}
+.footer p{
+  text-align: center;
+  color: #988f8f;
+  font-size: 20px;
 }
 
+/* Use a media query to add a breakpoint at 800px: */
+@media screen and (max-width: 800px) {
+  .box{
+    width: 94%;
+    float: left;
+    margin: 8px;
+    height: 15vh;
+  }
+  .box-icon{
+    display: block;
+  }
+  /*.box:first-child{
+    margin-top: 50px; 
+  }
+  .box-volume{
+    transform: translate(25%);
+  }*/
+}

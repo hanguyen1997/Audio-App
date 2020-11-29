@@ -10,30 +10,35 @@
     <title>Audio App</title>
   </head>
   <body>
-     <audio id="audio-body" volume="0.5" autoplay>
-       <source src="audio/rain.mp3" >
-     </audio>
-    <div class="app">
-      <img id="img-body" src="image/rain.gif">
-    </div>
-    <div class="box-icon">
-      <div class="box" id="city">
-        <img src="image/city.gif">
+    <div class="app" id="app">
+      <!-- audio -->
+      <audio id="audio-body" volume="0.5" autoplay><source src="audio/rain.mp3"></audio>
+      <!-- header -->
+      <div class="box-mp3" >
+        <div class="box-volume">
+          <input id="volume" type="range" min="0" max="100" value="50">
+          <img  id="change-volume" onclick="change_volume()" src="image/mute.png">
+        </div>
       </div>
-      <div class="box" id="rain">
-        <img src="image/rain.gif">
+      <!-- content -->
+      <div class="box-icon">
+        <div class="box" id="city">
+          <img src="image/city.gif">
+        </div>
+        <div class="box" id="rain">
+          <img src="image/rain.gif">
+        </div>
+        <div class="box" id="beach">
+          <img src="image/beach.gif">
+        </div>
+        <div class="box" id="forest">
+          <img src="image/forest.gif">
+        </div>
+        <div class="clear"></div>
       </div>
-      <div class="box" id="beach">
-        <img src="image/beach.gif">
-      </div>
-      <div class="box" id="forest">
-        <img src="image/forest.gif">
-      </div>
-    </div>
-    <div class="box-mp3" >
-      <div class="box-volume">
-        <input id="volume" type="range" min="0" max="100" value="50">
-        <img  id="change-volume" onclick="change_volume()" src="image/mute.png">
+      <!-- footer -->
+      <div class="footer" >
+        <p>Developer HaNguyen</p>
       </div>
     </div>
     <script src="index.js"  type="text/javascript"></script>
